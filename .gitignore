@@ -1,0 +1,32 @@
+# Secrets: never commit real credentials
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime artifacts (certificates are never stored on disk)
+*.log
+*.png
+!assets/**/*.png
+
+# Club logo is user-provided and may not be redistributed without permission
+assets/logo/*
+!assets/logo/.gitkeep
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

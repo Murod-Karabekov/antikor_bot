@@ -1,0 +1,29 @@
+services:
+  bot:
+    build: .
+    image: antikorrupsiya-klub-bot:latest
+    container_name: antikorrupsiya-klub-bot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TZ: ${TZ:-Asia/Tashkent}
+    stop_grace_period: 20s
+    stop_signal: SIGTERM
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+          pids: 128
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
