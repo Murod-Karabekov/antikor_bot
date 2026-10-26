@@ -17,11 +17,11 @@ ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE_PATH = ROOT / "assets" / "templates" / "antikorrupsiya_certificate.png"
 FONT_PATH = ROOT / "assets" / "fonts" / "DejaVuSerif-Bold.ttf"
 
-# Measured from the approved 1672x941 template (inclusive pixel bounds of the cream interior,
-# inside the gold border). Verified by tests/test_certificate.py.
+# Measured from the approved 1672x941 template (2026-10-26 design): inclusive pixel bounds of
+# the cream interior inside the gold border. Verified by tests/test_certificate.py.
 TEMPLATE_SIZE = (1672, 941)
-NAME_FIELD = (421, 492, 1253, 571)
-NAME_PADDING = 12  # clearance between the text and the gold border
+NAME_FIELD = (440, 420, 1231, 474)
+NAME_PADDING = 8  # clearance between the text and the gold border
 NAME_COLOR = (7, 63, 50)  # #073F32
 MAX_FONT_SIZE = 64
 MIN_FONT_SIZE = 20

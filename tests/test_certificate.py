@@ -15,7 +15,7 @@ from app.services.certificate import (
 )
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
-TEMPLATE_PIXEL_SHA256 = "af4b5dd3a3b6a135e7865af6f17a711883beb7d8d17a8d2d815724cb0fbbbaf6"
+TEMPLATE_PIXEL_SHA256 = "cc926c8b101efc2b17eee22dd232838f4ca8273ccbefbf5a9b39682655ac3239"
 SAMPLE_NAMES = [
     "Murod Karabekov",
     "Muhammadali Abdurahmonov",
